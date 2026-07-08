@@ -275,6 +275,42 @@ body { padding-top: var(--cg-strip-h); }
 .cg-colophon-note { margin: 4px 0 0; color: #9a9aa8; }
 @media (max-width: 640px) { .cg-strip-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .cg-skip { transition: none; } }
+
+/* ---- Mobile reading view (touch / small screens) ------------------------------------- */
+/* The immersive per-구 template is desktop-only. On touch devices and narrow screens the
+   .cg-read view is shown instead — it uses only safe, high-contrast CSS so text can never
+   go invisible on iOS Safari (no background-clip:text, backdrop-filter, 100vh, :hover-gated
+   reveals, or mix-blend-mode). Fully namespaced + generator-controlled. */
+.cg-read { display: none; }
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  /* Neutralise immersive templates that lock scrolling / lock the viewport on <body>. */
+  html, body { overflow-x: hidden !important; overflow-y: auto !important; height: auto !important;
+    min-height: 0 !important; position: static !important; touch-action: auto !important; background: #ffffff !important; }
+  .cg-immersive { display: none !important; }
+  .cg-read { display: block; }
+}
+.cg-read { max-width: 720px; margin: 0 auto; padding: 20px 18px 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #17171f; background: #ffffff; line-height: 1.75; -webkit-text-size-adjust: 100%; }
+.cg-read * { max-width: 100%; box-sizing: border-box; }
+.cg-read-head { padding: 8px 0 16px; border-bottom: 3px solid var(--cg-ra, #2d5bff); margin-bottom: 20px; }
+.cg-read-eyebrow { margin: 0 0 4px; color: var(--cg-rd, #333); font-weight: 700; font-size: 15px; letter-spacing: .02em; }
+.cg-read-head h1 { margin: 0; font-size: clamp(30px, 8vw, 40px); line-height: 1.15; color: #14141c; font-weight: 800; }
+.cg-read h2 { font-size: 20px; margin: 30px 0 10px; padding-left: 11px; color: #14141c; font-weight: 700;
+  border-left: 5px solid var(--cg-ra, #2d5bff); }
+.cg-read p { margin: 0 0 12px; font-size: 17px; color: #23232d; }
+.cg-read section { margin: 0; }
+.cg-read ul { margin: 8px 0 0; padding-left: 20px; }
+.cg-read li { margin: 8px 0; font-size: 16px; color: #23232d; }
+.cg-read li strong { color: #111119; font-weight: 700; }
+.cg-read .facts, .cg-read .symbols { list-style: none; padding: 14px 16px; margin: 8px 0 0;
+  background: #f5f6fa; border: 1px solid #e6e8f0; border-radius: 12px; }
+.cg-read .faq details { border: 1px solid #e6e8f0; border-radius: 10px; padding: 10px 14px; margin: 8px 0; background: #fbfbfd; }
+.cg-read .faq summary { cursor: pointer; font-weight: 700; font-size: 16px; color: #14141c; }
+.cg-read .faq details p { margin: 8px 0 2px; color: #44454f; }
+.cg-read a { color: #1a46d8; word-break: break-word; }
+.cg-read .sources { font-size: 14px; color: #55565f; }
+.cg-read .sources a { color: #3a5bd0; }
 </style>
 </head>
 <body>
@@ -283,6 +319,7 @@ body { padding-top: var(--cg-strip-h); }
     <span class="cg-ad">AD</span><span class="cg-strip-label">후원 파트너</span><span class="cg-strip-list"><a class="cg-strip-item" href="https://ikoffices.com" rel="sponsored noopener" target="_blank">일광오피스</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://mobidicsaju.com" rel="sponsored noopener" target="_blank">모비딕 사주</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://www.foodskorea.com/" rel="sponsored noopener" target="_blank">전국팔도 식품도감</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://myflowmakers.com" rel="sponsored noopener" target="_blank">마이플로우메이커스</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://yeonlijispace.com" rel="sponsored noopener" target="_blank">연리지 인테리어</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://yeonliji.io" rel="sponsored noopener" target="_blank">주식회사 연리지</a><span class="cg-strip-dot" aria-hidden="true">·</span><span class="cg-strip-item cg-strip-text">세무·법률 자문</span></span>
   </aside>
   <div id="cg-main" tabindex="-1"></div>
+  <div class="cg-immersive">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
@@ -735,6 +772,133 @@ body { padding-top: var(--cg-strip-h); }
   }catch(e){/* silent: content remains readable */}
 })();
 </script>
+  </div>
+  <main class="cg-read" id="cg-read" role="main" lang="ko" style="--cg-ra:#ab332b;--cg-ra2:#d09939;--cg-rd:#571d19">
+    <header class="cg-read-head">
+      <p class="cg-read-eyebrow">서울특별시</p>
+      <h1>성북구</h1>
+    </header>
+    <div class="cg-read-body">
+      <section id="r-intro">
+        <h2>지역 소개</h2>
+        <p>성북구는 한양도성 성곽의 북쪽 자락에 기대어 형성된 유서 깊은 문화·학문의 고장입니다. 구의 이름은 조선 영조 때 어영청 소속 북둔(北屯)이 도성 북쪽에 자리했던 데서 비롯되었으며, 성북동이라는 지명은 1894년 갑오개혁 무렵 문헌에 처음 등장합니다. 간송미술관과 심우장, 길상사, 최순우 옛집이 한옥 골목 사이에 이웃해 있어 서울에서 손꼽히는 근대문화 예술 밀집지로 통합니다. 고려대·국민대·성신여대·한성대를 비롯한 여러 대학이 밀집해 젊은 학구적 분위기가 도시 전역에 스며 있습니다. 북한산 자락의 정릉계곡과 개운산·오패산의 녹지가 도심 주거지와 맞닿아 자연과 생활이 가까운 곳입니다.</p>
+      </section>
+      <section id="r-facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 423,705명 (2025)</li>
+          <li>면적: 24.58 km²</li>
+          <li>신설: 1949년 8월 13일</li>
+        </ul>
+      </section>
+      <section id="r-history">
+        <h2>역사</h2>
+        <p>성북구 일대는 조선시대에 도성 방어를 담당한 어영청 북둔이 설치되면서 &#x27;성 북쪽&#x27;이라는 뜻의 지명을 얻었고, 정릉동에는 태조 이성계의 계비 신덕왕후 강씨의 능인 정릉이 옮겨져 지금까지 남아 있습니다. 개항기와 일제강점기에는 성북동 골짜기에 만해 한용운이 조선총독부를 등지도록 북향으로 지은 심우장이 들어섰고, 문화재 수집가 간송 전형필이 1938년 보화각(현 간송미술관)을 세워 훈민정음 해례본 등을 지켜냈습니다. 행정구역으로서 성북구는 1949년 8월 13일 서울시의 구로 신설되었으며, 1963년 양주군 노해면 일부가 편입되었다가 1973년 그 지역이 도봉구로 분리되었습니다. 1988년 5월 1일 자치구로 승격되어 주민 직선 자치의 기반을 갖추었습니다. 이후 4호선과 6호선이 차례로 개통되고 2007년 행정동 통합이 이뤄지며 도심과 동북부 외곽을 잇는 부도심으로 성장했습니다.</p>
+      </section>
+      <section id="r-geography">
+        <h2>지리·자연환경</h2>
+        <p>성북구는 서울 도심 종로구와 동북부 외곽 사이에 놓여 강북구·노원구·동대문구·중랑구와 접하고 북쪽으로는 경기도 고양시와 맞닿습니다. 북서쪽은 삼각산으로도 불리는 북한산이 우뚝 솟아 정릉계곡을 이루고, 그 물줄기가 정릉천이 되어 월곡동을 지나 청계천으로 흘러듭니다. 도성 안쪽에서는 북악산에서 발원한 성북천이 성북동과 삼선동을 관통하며 남류해 역시 청계천에 합류합니다. 구의 중앙과 동쪽에는 개운산(해발 약 134m)과 오패산(약 123m)·벽오산(약 135m) 같은 야트막한 구릉이 자리해 주거지 사이의 녹지 축을 형성합니다. 전체 면적은 약 24.58㎢로 서울시의 4%가량을 차지하며, 산지와 하천 계곡이 어우러진 기복 있는 지형이 특징입니다.</p>
+      </section>
+      <section id="r-characteristics">
+        <h2>지역 특징</h2>
+        <p>성북구는 인구 약 42만 명, 20개 행정동으로 이루어진 서울 동북부의 대표적 주거·교육 자치구입니다. 고려대·국민대·성신여대·동덕여대·한성대·서경대와 한국예술종합학교가 구 안에 몰려 있어 대학가 상권과 하숙·원룸촌이 발달한 학원도시 성격이 뚜렷합니다. 성북동 일대는 각국 대사관저와 전통 한옥, 사립 미술관이 공존하는 문화 부촌으로 알려진 반면, 길음·장위 뉴타운을 중심으로 대규모 아파트 재개발이 진행되며 도시 경관이 빠르게 다변화하고 있습니다. 안암동 고려대와 홍릉 일대의 연구기관은 지식 기반 산업의 거점 역할을 합니다. 관 주도의 마을 아카이브와 예술 창작소 등 생활문화 정책이 활발해 &#x27;문화도시&#x27;를 표방하는 것도 이 구의 뚜렷한 색깔입니다.</p>
+      </section>
+      <section id="r-landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>간송미술관(보화각)</strong> — 간송 전형필이 1938년 성북동에 세운 우리나라 최초의 사립 미술관으로, 훈민정음 해례본과 신윤복 풍속화 등 국보급 문화재를 소장한 근대 문화재 수호의 상징입니다.</li>
+          <li><strong>길상사</strong> — 본래 대형 요정이던 대원각을 시주받아 법정 스님이 도심 속 청정 도량으로 탈바꿈시킨 사찰로, 성북동 골짜기의 고즈넉한 산책과 템플스테이 명소입니다.</li>
+          <li><strong>심우장</strong> — 독립운동가이자 시인인 만해 한용운이 조선총독부를 마주하지 않으려 일부러 북향으로 지은 한옥으로, 그가 쓰던 방과 유품이 보존된 항일정신의 산실입니다.</li>
+          <li><strong>성북동 문화예술 골목</strong> — 간송미술관·수연산방·한국가구박물관과 각국 대사관저, 전통 한옥이 어우러진 거리로, 서울에서 손꼽히는 근대문화 답사 코스입니다.</li>
+        </ul>
+      </section>
+      <section id="r-heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>정릉(사적)</strong> — 조선 태조의 계비 신덕왕후 강씨의 능으로, 본래 도성 안에 있다가 1409년 태종의 명으로 현재의 정릉동으로 옮겨진 조선 초기 왕릉입니다.</li>
+          <li><strong>최순우 옛집</strong> — 국립중앙박물관장을 지낸 미술사학자 혜곡 최순우가 말년을 보낸 근대 한옥으로, 한국내셔널트러스트 시민문화유산 1호이자 서울시 등록문화재입니다.</li>
+          <li><strong>한국가구박물관</strong> — 전국의 옛 한옥 목재를 옮겨 재조립한 공간에 조선 후기 전통 목가구를 재료·지역별로 전시하는 박물관으로, 예약제로 운영되는 한국 주거문화의 보고입니다.</li>
+          <li><strong>수연산방</strong> — 소설가 상허 이태준이 1930년대에 짓고 거처하며 집필한 성북동 한옥으로, 현재는 그의 문학 정취를 느끼며 차를 즐길 수 있는 전통찻집으로 이어지고 있습니다.</li>
+          <li><strong>성북마을아카이브</strong> — 성북동을 비롯한 마을의 역사와 인물, 이야기를 주민 참여로 수집·기록하는 구 차원의 문화 아카이브 사업으로, 지역 문화도시 정책의 상징입니다.</li>
+        </ul>
+      </section>
+      <section id="r-nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>정릉계곡(북한산)</strong> — 삼각산 남쪽 자락의 맑은 계곡으로, 예부터 여름 피서지로 이름났으며 북한산 등산과 물놀이를 함께 즐길 수 있는 대표 자연 휴식처입니다.</li>
+          <li><strong>북한산둘레길</strong> — 북한산 자락을 잇는 저지대 순환 산책로로, 성북구 구간에서는 정릉·형제봉 방면으로 이어져 가벼운 힐링 트레킹을 즐길 수 있습니다.</li>
+          <li><strong>개운산근린공원</strong> — 해발 약 134m의 개운산에 조성된 생활권 공원으로, 산책로와 정자, 지압보도, 테니스장·운동장 등 생활체육 시설이 갖춰져 있습니다.</li>
+          <li><strong>오동근린공원</strong> — 월곡동 일대 오패산·벽오산 두 봉우리에 걸친 대단위 숲 공원으로, 유아숲체험장과 치유의 숲, 오동숲속도서관을 품은 자연 생태 쉼터입니다.</li>
+          <li><strong>북악스카이웨이·성북천 산책로</strong> — 북악산 능선을 따르는 드라이브·전망 길과 복원된 성북천 물길 산책로로, 도심 야경과 도시 하천의 정취를 함께 누릴 수 있습니다.</li>
+        </ul>
+      </section>
+      <section id="r-transport">
+        <h2>교통</h2>
+        <p>성북구는 지하철 4호선이 한성대입구·성신여대입구·길음 세 역을 지나며 도심 방면 이동의 중심축을 이룹니다. 6호선은 보문·안암(고려대병원)·고려대·월곡·상월곡·돌곶이 등을 연결해 구의 남동부와 홍릉·상암 방면을 잇습니다. 2017년 개통한 경전철 우이신설선은 북한산보국문·정릉역을 지나 성신여대입구역과 보문역에서 각각 4호선·6호선과 환승되어 산자락 주거지의 접근성을 크게 높였습니다. 도로로는 내부순환로와 동소문로·보문로·정릉로 등 간선축이 도심과 강북·동대문 방면을 연결합니다. 성북구청은 성신여대입구역과 보문역 중간의 보문로 168(삼선동)에 위치해 대중교통 접근이 편리합니다.</p>
+      </section>
+      <section id="r-symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 진달래</li>
+          <li>구목(나무): 감나무</li>
+          <li>구조(새): 참새</li>
+        </ul>
+      </section>
+      <section id="r-faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>성북구 이름은 어디서 유래했나요?</summary>
+            <p>조선 영조 때 도성 방어를 맡은 어영청의 북둔(北屯)이 성곽 북쪽에 설치된 데서 &#x27;성 북쪽&#x27;이라는 뜻의 지명이 유래했습니다.</p>
+          </details>
+          <details>
+            <summary>성북구에 있는 대학교는 어디인가요?</summary>
+            <p>고려대·국민대·성신여대·동덕여대·한성대·서경대와 한국예술종합학교 등 여러 대학이 밀집해 대표적인 대학가로 꼽힙니다.</p>
+          </details>
+          <details>
+            <summary>성북동에서 꼭 가볼 문화 명소는 어디인가요?</summary>
+            <p>간송미술관, 길상사, 심우장, 최순우 옛집, 한국가구박물관이 한옥 골목을 따라 이웃해 있어 근대문화 답사에 좋습니다.</p>
+          </details>
+          <details>
+            <summary>성북구의 대표 역사 유적은 무엇인가요?</summary>
+            <p>조선 태조의 계비 신덕왕후 강씨의 능인 정릉이 정릉동에 있으며, 사적으로 지정된 조선 초기 왕릉입니다.</p>
+          </details>
+          <details>
+            <summary>성북구는 지하철로 어떻게 가나요?</summary>
+            <p>4호선(한성대입구·성신여대입구·길음), 6호선(보문·안암·고려대·월곡 등), 경전철 우이신설선(정릉·북한산보국문)이 지나 도심과 산자락을 두루 연결합니다.</p>
+          </details>
+          <details>
+            <summary>성북구청은 어디에 있나요?</summary>
+            <p>성북구청은 삼선동 보문로 168에 있으며, 4호선 성신여대입구역과 6호선 보문역 중간에 위치해 접근이 편리합니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="r-links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.sb.go.kr/" rel="noopener">성북구청 공식 홈페이지</a></li>
+          <li><a href="https://www.sb.go.kr/tour/main.do" rel="noopener">성북구 문화관광</a></li>
+        </ul>
+      </section>
+      <section id="r-github">
+        <h2>GitHub</h2>
+        <ul>
+          <li><a href="https://github.com/kr-seoul-seongbuk" rel="noopener">GitHub 조직: kr-seoul-seongbuk</a></li>
+          <li><a href="https://github.com/kr-seoul-seongbuk/kr-seoul-seongbuk.github.io" rel="noopener">이 사이트 저장소</a></li>
+        </ul>
+      </section>
+      <section id="r-sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EC%84%B1%EB%B6%81%EA%B5%AC" rel="noopener">성북구 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.sb.go.kr/www/contents.do?key=5962" rel="noopener">성북구청 - 현황</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.sb.go.kr/tour/contents.do?key=130" rel="noopener">정릉 - 성북구 문화관광</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.sb.go.kr/tour/contents.do?key=7689" rel="noopener">오동근린공원 - 성북구 문화관광</a> (조회 2026-07-08)</li>
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B0%9C%EC%9A%B4%EC%82%B0" rel="noopener">개운산 - 위키백과</a> (조회 2026-07-08)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
   <aside class="cg-sponsors" aria-label="후원 파트너 상세">
     <p class="cg-spon-head"><span class="cg-ad">AD</span> 후원 파트너 <small>이 링크는 광고이며 편집상의 추천이 아닙니다 (rel=&quot;sponsored&quot;).</small></p>
     <ul class="cg-spon-grid">
