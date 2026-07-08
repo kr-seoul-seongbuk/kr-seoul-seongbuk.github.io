@@ -117,35 +117,396 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "성북구는 인구 약 42만 명, 20개 행정동으로 이루어진 서울 동북부의 대표적 주거·교육 자치구입니다. 고려대·국민대·성신여대·동덕여대·한성대·서경대와 한국예술종합학교가 구 안에 몰려 있어 대학가 상권과 하숙·원룸촌이 발달한 학원도시 성격이 뚜렷합니다. 성북동 일대는 각국 대사관저와 전통 한옥, 사립 미술관이 공존하는 문화 부촌으로 알려진 반면, 길음·장위 뉴타운을 중심으로 대규모 아파트 재개발이 진행되며 도시 경관이 빠르게 다변화하고 있습니다. 안암동 고려대와 홍릉 일대의 연구기관은 지식 기반 산업의 거점 역할을 합니다. 관 주도의 마을 아카이브와 예술 창작소 등 생활문화 정책이 활발해 '문화도시'를 표방하는 것도 이 구의 뚜렷한 색깔입니다.",
+  "coords": {
+    "lat": 37.5894,
+    "lng": 127.0167
+  },
+  "cultural_heritage": [
+    {
+      "description": "조선 태조의 계비 신덕왕후 강씨의 능으로, 본래 도성 안에 있다가 1409년 태종의 명으로 현재의 정릉동으로 옮겨진 조선 초기 왕릉입니다.",
+      "name": "정릉(사적)"
+    },
+    {
+      "description": "국립중앙박물관장을 지낸 미술사학자 혜곡 최순우가 말년을 보낸 근대 한옥으로, 한국내셔널트러스트 시민문화유산 1호이자 서울시 등록문화재입니다.",
+      "name": "최순우 옛집"
+    },
+    {
+      "description": "전국의 옛 한옥 목재를 옮겨 재조립한 공간에 조선 후기 전통 목가구를 재료·지역별로 전시하는 박물관으로, 예약제로 운영되는 한국 주거문화의 보고입니다.",
+      "name": "한국가구박물관"
+    },
+    {
+      "description": "소설가 상허 이태준이 1930년대에 짓고 거처하며 집필한 성북동 한옥으로, 현재는 그의 문학 정취를 느끼며 차를 즐길 수 있는 전통찻집으로 이어지고 있습니다.",
+      "name": "수연산방"
+    },
+    {
+      "description": "성북동을 비롯한 마을의 역사와 인물, 이야기를 주민 참여로 수집·기록하는 구 차원의 문화 아카이브 사업으로, 지역 문화도시 정책의 상징입니다.",
+      "name": "성북마을아카이브"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "조선 영조 때 도성 방어를 맡은 어영청의 북둔(北屯)이 성곽 북쪽에 설치된 데서 '성 북쪽'이라는 뜻의 지명이 유래했습니다.",
+      "question": "성북구 이름은 어디서 유래했나요?"
+    },
+    {
+      "answer": "고려대·국민대·성신여대·동덕여대·한성대·서경대와 한국예술종합학교 등 여러 대학이 밀집해 대표적인 대학가로 꼽힙니다.",
+      "question": "성북구에 있는 대학교는 어디인가요?"
+    },
+    {
+      "answer": "간송미술관, 길상사, 심우장, 최순우 옛집, 한국가구박물관이 한옥 골목을 따라 이웃해 있어 근대문화 답사에 좋습니다.",
+      "question": "성북동에서 꼭 가볼 문화 명소는 어디인가요?"
+    },
+    {
+      "answer": "조선 태조의 계비 신덕왕후 강씨의 능인 정릉이 정릉동에 있으며, 사적으로 지정된 조선 초기 왕릉입니다.",
+      "question": "성북구의 대표 역사 유적은 무엇인가요?"
+    },
+    {
+      "answer": "4호선(한성대입구·성신여대입구·길음), 6호선(보문·안암·고려대·월곡 등), 경전철 우이신설선(정릉·북한산보국문)이 지나 도심과 산자락을 두루 연결합니다.",
+      "question": "성북구는 지하철로 어떻게 가나요?"
+    },
+    {
+      "answer": "성북구청은 삼선동 보문로 168에 있으며, 4호선 성신여대입구역과 6호선 보문역 중간에 위치해 접근이 편리합니다.",
+      "question": "성북구청은 어디에 있나요?"
+    }
+  ],
+  "geography_nature": "성북구는 서울 도심 종로구와 동북부 외곽 사이에 놓여 강북구·노원구·동대문구·중랑구와 접하고 북쪽으로는 경기도 고양시와 맞닿습니다. 북서쪽은 삼각산으로도 불리는 북한산이 우뚝 솟아 정릉계곡을 이루고, 그 물줄기가 정릉천이 되어 월곡동을 지나 청계천으로 흘러듭니다. 도성 안쪽에서는 북악산에서 발원한 성북천이 성북동과 삼선동을 관통하며 남류해 역시 청계천에 합류합니다. 구의 중앙과 동쪽에는 개운산(해발 약 134m)과 오패산(약 123m)·벽오산(약 135m) 같은 야트막한 구릉이 자리해 주거지 사이의 녹지 축을 형성합니다. 전체 면적은 약 24.58㎢로 서울시의 4%가량을 차지하며, 산지와 하천 계곡이 어우러진 기복 있는 지형이 특징입니다.",
+  "history": "성북구 일대는 조선시대에 도성 방어를 담당한 어영청 북둔이 설치되면서 '성 북쪽'이라는 뜻의 지명을 얻었고, 정릉동에는 태조 이성계의 계비 신덕왕후 강씨의 능인 정릉이 옮겨져 지금까지 남아 있습니다. 개항기와 일제강점기에는 성북동 골짜기에 만해 한용운이 조선총독부를 등지도록 북향으로 지은 심우장이 들어섰고, 문화재 수집가 간송 전형필이 1938년 보화각(현 간송미술관)을 세워 훈민정음 해례본 등을 지켜냈습니다. 행정구역으로서 성북구는 1949년 8월 13일 서울시의 구로 신설되었으며, 1963년 양주군 노해면 일부가 편입되었다가 1973년 그 지역이 도봉구로 분리되었습니다. 1988년 5월 1일 자치구로 승격되어 주민 직선 자치의 기반을 갖추었습니다. 이후 4호선과 6호선이 차례로 개통되고 2007년 행정동 통합이 이뤄지며 도심과 동북부 외곽을 잇는 부도심으로 성장했습니다.",
+  "intro": "성북구는 한양도성 성곽의 북쪽 자락에 기대어 형성된 유서 깊은 문화·학문의 고장입니다. 구의 이름은 조선 영조 때 어영청 소속 북둔(北屯)이 도성 북쪽에 자리했던 데서 비롯되었으며, 성북동이라는 지명은 1894년 갑오개혁 무렵 문헌에 처음 등장합니다. 간송미술관과 심우장, 길상사, 최순우 옛집이 한옥 골목 사이에 이웃해 있어 서울에서 손꼽히는 근대문화 예술 밀집지로 통합니다. 고려대·국민대·성신여대·한성대를 비롯한 여러 대학이 밀집해 젊은 학구적 분위기가 도시 전역에 스며 있습니다. 북한산 자락의 정릉계곡과 개운산·오패산의 녹지가 도심 주거지와 맞닿아 자연과 생활이 가까운 곳입니다.",
+  "landmarks": [
+    {
+      "description": "간송 전형필이 1938년 성북동에 세운 우리나라 최초의 사립 미술관으로, 훈민정음 해례본과 신윤복 풍속화 등 국보급 문화재를 소장한 근대 문화재 수호의 상징입니다.",
+      "name": "간송미술관(보화각)"
+    },
+    {
+      "description": "본래 대형 요정이던 대원각을 시주받아 법정 스님이 도심 속 청정 도량으로 탈바꿈시킨 사찰로, 성북동 골짜기의 고즈넉한 산책과 템플스테이 명소입니다.",
+      "name": "길상사"
+    },
+    {
+      "description": "독립운동가이자 시인인 만해 한용운이 조선총독부를 마주하지 않으려 일부러 북향으로 지은 한옥으로, 그가 쓰던 방과 유품이 보존된 항일정신의 산실입니다.",
+      "name": "심우장"
+    },
+    {
+      "description": "간송미술관·수연산방·한국가구박물관과 각국 대사관저, 전통 한옥이 어우러진 거리로, 서울에서 손꼽히는 근대문화 답사 코스입니다.",
+      "name": "성북동 문화예술 골목"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "삼각산 남쪽 자락의 맑은 계곡으로, 예부터 여름 피서지로 이름났으며 북한산 등산과 물놀이를 함께 즐길 수 있는 대표 자연 휴식처입니다.",
+      "name": "정릉계곡(북한산)"
+    },
+    {
+      "description": "북한산 자락을 잇는 저지대 순환 산책로로, 성북구 구간에서는 정릉·형제봉 방면으로 이어져 가벼운 힐링 트레킹을 즐길 수 있습니다.",
+      "name": "북한산둘레길"
+    },
+    {
+      "description": "해발 약 134m의 개운산에 조성된 생활권 공원으로, 산책로와 정자, 지압보도, 테니스장·운동장 등 생활체육 시설이 갖춰져 있습니다.",
+      "name": "개운산근린공원"
+    },
+    {
+      "description": "월곡동 일대 오패산·벽오산 두 봉우리에 걸친 대단위 숲 공원으로, 유아숲체험장과 치유의 숲, 오동숲속도서관을 품은 자연 생태 쉼터입니다.",
+      "name": "오동근린공원"
+    },
+    {
+      "description": "북악산 능선을 따르는 드라이브·전망 길과 복원된 성북천 물길 산책로로, 도심 야경과 도시 하천의 정취를 함께 누릴 수 있습니다.",
+      "name": "북악스카이웨이·성북천 산책로"
+    }
+  ],
+  "org_slug": "kr-seoul-seongbuk",
+  "sido": "서울특별시",
+  "sigungu": "성북구",
+  "symbols": {
+    "bird": "참새",
+    "flower": "진달래",
+    "tree": "감나무"
+  },
+  "transport": "성북구는 지하철 4호선이 한성대입구·성신여대입구·길음 세 역을 지나며 도심 방면 이동의 중심축을 이룹니다. 6호선은 보문·안암(고려대병원)·고려대·월곡·상월곡·돌곶이 등을 연결해 구의 남동부와 홍릉·상암 방면을 잇습니다. 2017년 개통한 경전철 우이신설선은 북한산보국문·정릉역을 지나 성신여대입구역과 보문역에서 각각 4호선·6호선과 환승되어 산자락 주거지의 접근성을 크게 높였습니다. 도로로는 내부순환로와 동소문로·보문로·정릉로 등 간선축이 도심과 강북·동대문 방면을 연결합니다. 성북구청은 성신여대입구역과 보문역 중간의 보문로 168(삼선동)에 위치해 대중교통 접근이 편리합니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">서울특별시</p>
-      <h1>성북구</h1>
-    </header>
-    <div class="content">
-      <section id="intro">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+  :root{
+    --ink:#5C4033;
+    --hanji:#FDF5E6;
+    --hanji-deep:#F1E4C9;
+    --ink-soft:rgba(92,64,51,.72);
+    --ink-faint:rgba(92,64,51,.14);
+    --seal:#9A3B2E;
+    --rod:#3C2A1E;
+  }
+
+  #sb-root *{box-sizing:border-box;}
+  #sb-root{
+    font-family:"RIDIBatang","Noto Serif KR","Nanum Myeongjo",serif;
+    color:var(--ink);
+    background:
+      radial-gradient(120% 90% at 50% 0%, #FFFBF2 0%, var(--hanji) 55%, var(--hanji-deep) 100%);
+    line-height:1.9;
+    letter-spacing:.01em;
+    position:relative;
+    overflow-x:hidden;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* hanji fiber texture */
+  #sb-root::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(92,64,51,.035) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(0deg, rgba(92,64,51,.03) 0 1px, transparent 1px 4px),
+      radial-gradient(circle at 20% 30%, rgba(92,64,51,.05) 0 2px, transparent 3px),
+      radial-gradient(circle at 70% 60%, rgba(92,64,51,.04) 0 2px, transparent 3px),
+      radial-gradient(circle at 40% 80%, rgba(92,64,51,.04) 0 2px, transparent 3px);
+    background-size:auto,auto,180px 180px,220px 220px,260px 260px;
+  }
+
+  /* ===================== HERO / SCROLL HEADER ===================== */
+  .sb-hero{
+    position:relative;z-index:2;
+    padding:clamp(2rem,6vw,5rem) 1rem clamp(1rem,3vw,2rem);
+    text-align:center;
+  }
+  .sb-hero__eyebrow{
+    font-size:.8rem;letter-spacing:.5em;color:var(--ink-soft);
+    margin:0 0 1.2rem;text-indent:.5em;
+  }
+  .sb-hero__scroll{
+    margin:0 auto;max-width:1180px;position:relative;
+    display:flex;align-items:stretch;justify-content:center;
+    filter:drop-shadow(0 22px 40px rgba(60,42,30,.22));
+  }
+  /* wooden rods on each side */
+  .sb-rod{
+    width:clamp(18px,2.6vw,30px);flex:0 0 auto;border-radius:12px;
+    background:
+      linear-gradient(90deg,#1f150e,#6b4a30 22%,#a9784b 50%,#5a3c26 78%,#1f150e);
+    box-shadow:inset 0 0 6px rgba(0,0,0,.5), 0 6px 14px rgba(0,0,0,.25);
+    position:relative;z-index:3;
+    transition:transform 1s cubic-bezier(.16,.84,.3,1);
+  }
+  .sb-rod::before,.sb-rod::after{
+    content:"";position:absolute;left:50%;transform:translateX(-50%);
+    width:150%;height:clamp(16px,2vw,22px);border-radius:50%;
+    background:radial-gradient(circle,#c79a5f,#5a3c26 70%,#2a1c12);
+    box-shadow:0 3px 6px rgba(0,0,0,.4);
+  }
+  .sb-rod::before{top:-9px;}
+  .sb-rod::after{bottom:-9px;}
+  .sb-rod--l{transform:translateX(28px);}
+  .sb-rod--r{transform:translateX(-28px);}
+  .sb-hero.is-open .sb-rod--l{transform:translateX(0);}
+  .sb-hero.is-open .sb-rod--r{transform:translateX(0);}
+
+  /* the paper that unfolds between rods */
+  .sb-paper{
+    flex:1 1 auto;position:relative;z-index:2;overflow:hidden;
+    background:
+      linear-gradient(180deg, #FFFDF6, var(--hanji) 40%, var(--hanji-deep));
+    border-top:1px solid rgba(92,64,51,.15);
+    border-bottom:1px solid rgba(92,64,51,.15);
+    padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,3rem);
+    /* unfold: clip from center outward */
+    clip-path:inset(0 50% 0 50%);
+    transition:clip-path 1.15s cubic-bezier(.2,.7,.2,1);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    min-height:clamp(240px,42vw,420px);
+  }
+  .sb-hero.is-open .sb-paper{clip-path:inset(0 0 0 0);}
+  /* aged edge shadow inside paper */
+  .sb-paper::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    box-shadow:inset 0 0 60px rgba(92,64,51,.14), inset 0 0 6px rgba(92,64,51,.2);
+    background:
+      linear-gradient(90deg, rgba(92,64,51,.09), transparent 8%, transparent 92%, rgba(92,64,51,.09));
+  }
+
+  /* vertical writing title block */
+  .sb-vert{
+    writing-mode:vertical-rl;text-orientation:upright;
+    display:flex;gap:clamp(.6rem,2vw,1.4rem);align-items:flex-start;justify-content:center;
+    opacity:0;transform:translateY(-16px);
+    transition:opacity 1s ease .5s, transform 1s ease .5s;
+    max-height:min(60vh,360px);
+  }
+  .sb-hero.is-open .sb-vert{opacity:1;transform:translateY(0);}
+  .sb-vert__title{
+    font-family:"Nanum Myeongjo","Noto Serif KR",serif;font-weight:800;
+    font-size:clamp(1.9rem,5.5vw,3.4rem);line-height:1.15;
+    letter-spacing:.12em;color:var(--ink);margin:0;
+  }
+  .sb-vert__sub{
+    font-size:clamp(.85rem,2.4vw,1.05rem);color:var(--ink-soft);
+    letter-spacing:.28em;margin:0;padding-top:.4rem;
+  }
+  .sb-vert__lead{
+    writing-mode:horizontal-tb;text-orientation:mixed;
+    max-width:min(80vw,620px);margin:1.4rem auto 0;
+    font-size:clamp(.92rem,2.4vw,1.05rem);color:var(--ink-soft);
+    opacity:0;transition:opacity 1s ease 1s;
+  }
+  .sb-hero.is-open .sb-vert__lead{opacity:1;}
+
+  /* seal stamp */
+  .sb-seal{
+    position:absolute;bottom:clamp(1rem,3vw,2rem);right:clamp(1.2rem,4vw,3rem);
+    width:clamp(46px,7vw,72px);height:clamp(46px,7vw,72px);
+    border:2px solid var(--seal);border-radius:8px;color:var(--seal);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    writing-mode:vertical-rl;font-family:"Nanum Myeongjo",serif;font-weight:800;
+    font-size:clamp(.7rem,1.9vw,1rem);letter-spacing:.1em;line-height:1.1;
+    background:rgba(154,59,46,.06);z-index:4;
+    transform:rotate(-4deg) scale(.6);opacity:0;
+    transition:transform .7s cubic-bezier(.34,1.56,.64,1) 1.2s, opacity .5s ease 1.2s;
+  }
+  .sb-hero.is-open .sb-seal{transform:rotate(-4deg) scale(1);opacity:.9;}
+
+  .sb-scrollcue{
+    margin:1.6rem auto 0;font-size:.78rem;letter-spacing:.35em;color:var(--ink-soft);
+    animation:sbFloat 2.4s ease-in-out infinite;
+  }
+  @keyframes sbFloat{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
+
+  /* ===================== BODY / CONTENT ===================== */
+  .sb-body{
+    position:relative;z-index:2;
+    max-width:1120px;margin:0 auto;
+    padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2.5rem) 5rem;
+  }
+  .sb-body__hint{
+    text-align:center;color:var(--ink-soft);font-size:.85rem;letter-spacing:.2em;
+    margin:0 0 2.4rem;
+  }
+
+  /* each section rendered as an unrolling hanji panel */
+  #sb-content section{
+    position:relative;
+    background:linear-gradient(180deg,#FFFDF6,var(--hanji));
+    border:1px solid var(--ink-faint);
+    border-left:5px solid var(--ink);
+    border-radius:4px 14px 14px 4px;
+    padding:clamp(1.4rem,3.2vw,2.2rem) clamp(1.3rem,3.4vw,2.6rem);
+    margin:0 0 clamp(1.4rem,3vw,2.2rem);
+    box-shadow:0 10px 26px rgba(92,64,51,.10);
+    overflow:hidden;
+  }
+  #sb-content section::before{
+    content:"";position:absolute;top:0;left:0;bottom:0;width:5px;
+    background:repeating-linear-gradient(0deg, var(--ink) 0 6px, rgba(253,245,230,.5) 6px 10px);
+    opacity:.35;
+  }
+  /* reveal-on-scroll enhancement */
+  #sb-content section.sb-anim{opacity:0;transform:translateY(26px);}
+  #sb-content section.sb-in{opacity:1;transform:translateY(0);
+    transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);}
+
+  #sb-content h2{
+    font-family:"Nanum Myeongjo","Noto Serif KR",serif;font-weight:800;
+    font-size:clamp(1.3rem,3.4vw,1.75rem);color:var(--ink);
+    margin:0 0 1rem;padding-bottom:.6rem;position:relative;
+    display:inline-block;letter-spacing:.04em;
+  }
+  #sb-content h2::after{
+    content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;
+    background:linear-gradient(90deg,var(--ink),transparent);
+  }
+  #sb-content h3{
+    font-family:"Nanum Myeongjo",serif;font-weight:700;color:var(--ink);
+    font-size:1.1rem;margin:1.4rem 0 .6rem;letter-spacing:.03em;
+  }
+  #sb-content p{margin:.7rem 0;color:#4a352a;font-size:clamp(.98rem,2.3vw,1.05rem);}
+  #sb-content a{color:var(--seal);text-decoration:none;border-bottom:1px dotted var(--seal);}
+  #sb-content a:hover{background:rgba(154,59,46,.08);}
+  #sb-content ul,#sb-content ol{margin:.6rem 0 .6rem;padding-left:1.3rem;}
+  #sb-content li{margin:.35rem 0;color:#4a352a;}
+
+  /* facts / symbols laid out as vertical-accent cards */
+  #sb-content .facts,#sb-content .symbols{
+    list-style:none;padding:0;margin:1rem 0 0;
+    display:grid;gap:.9rem;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  }
+  #sb-content .facts li,#sb-content .symbols li{
+    background:var(--hanji);border:1px solid var(--ink-faint);
+    border-top:3px solid var(--ink);border-radius:3px;
+    padding:.85rem 1rem;margin:0;font-size:.96rem;
+    box-shadow:0 4px 12px rgba(92,64,51,.07);
+  }
+  #sb-content .facts dt,#sb-content .symbols dt{font-weight:700;color:var(--ink);}
+  #sb-content .facts dl,#sb-content .symbols dl{margin:0;}
+
+  /* faq details */
+  #sb-content .faq details{
+    border:1px solid var(--ink-faint);border-radius:6px;background:var(--hanji);
+    margin:.7rem 0;overflow:hidden;
+  }
+  #sb-content .faq summary{
+    cursor:pointer;padding:.9rem 1.1rem;font-weight:700;color:var(--ink);
+    list-style:none;position:relative;padding-right:2.4rem;
+    font-family:"Nanum Myeongjo",serif;
+  }
+  #sb-content .faq summary::-webkit-details-marker{display:none;}
+  #sb-content .faq summary::after{
+    content:"筆";position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+    color:var(--seal);font-weight:800;transition:transform .3s ease;
+  }
+  #sb-content .faq details[open] summary::after{transform:translateY(-50%) rotate(90deg);}
+  #sb-content .faq details[open] summary{border-bottom:1px solid var(--ink-faint);}
+  #sb-content .faq details > *:not(summary){padding:0 1.1rem 1rem;color:#4a352a;}
+
+  .sb-foot{
+    text-align:center;padding:2rem 1rem 3rem;color:var(--ink-soft);
+    font-size:.8rem;letter-spacing:.2em;position:relative;z-index:2;
+  }
+  .sb-foot::before{
+    content:"";display:block;width:60px;height:1px;margin:0 auto 1.2rem;
+    background:var(--ink);opacity:.4;
+  }
+
+  @media (max-width:640px){
+    .sb-rod--l{transform:translateX(16px);}
+    .sb-rod--r{transform:translateX(-16px);}
+    .sb-vert{max-height:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sb-paper{clip-path:inset(0 0 0 0)!important;transition:none;}
+    .sb-rod--l,.sb-rod--r{transform:translateX(0)!important;}
+    .sb-vert,.sb-vert__lead,.sb-seal{opacity:1!important;transform:none!important;}
+    #sb-content section.sb-anim{opacity:1!important;transform:none!important;}
+    .sb-scrollcue{animation:none;}
+  }
+</style>
+
+<div id="sb-root">
+
+  <!-- ============ SCROLL / DUROMARI HERO (progressive enhancement) ============ -->
+  <header class="sb-hero" id="sb-hero">
+    <p class="sb-hero__eyebrow">서울특별시 · kr-seoul-seongbuk</p>
+    <div class="sb-hero__scroll" role="img" aria-label="성북구 지역 정보 · 서울특별시 두루마리">
+      <div class="sb-rod sb-rod--l" aria-hidden="true"></div>
+      <div class="sb-paper">
+        <div class="sb-vert">
+          <h1 class="sb-vert__title">성북구 지역 정보 · 서울특별시</h1>
+          <p class="sb-vert__sub">서울특별시 성북구</p>
+        </div>
+        <p class="sb-vert__lead">성북구는 한양도성 성곽의 북쪽 자락에 기대어 형성된 유서 깊은 문화·학문의 고장입니다. 구의 이름은 조선 영조 때 어영청 소속 북둔(北屯)이 도성 북쪽에 자리했던 데서 비롯되었으며, 성북동이라는 지명은 1894년 갑오개혁 무렵 문헌에 처음 등장합니다. 간송미술관과 심우장, 길상사, 최순우 옛집이 한옥 골목 사이에 이웃해 있어 서울에서 손꼽히는 근대문화 예술 밀집지로 통합니다. 고려대·국민대·성신여대·한성대를 비롯한 여러 대학이 밀집해 젊은 학구적 분위기가 도시 전역에 스며 있습니다. 북한산 자락의 정릉계곡과 개운산·오패산의 녹지가 도심 주거지와 맞닿아 자연과 생활이 가까운 곳입니다.</p>
+        <div class="sb-seal" aria-hidden="true">城北<br>之記</div>
+      </div>
+      <div class="sb-rod sb-rod--r" aria-hidden="true"></div>
+    </div>
+    <p class="sb-scrollcue" aria-hidden="true">아래로 펼쳐 읽기 ▾</p>
+  </header>
+
+  <!-- ============ CONTENT (always readable, JS-independent) ============ -->
+  <main class="sb-body">
+    <p class="sb-body__hint">한 장 한 장, 성북구의 문인(文人) 정취를 두루마리처럼 펼쳐 읽습니다.</p>
+    <div id="sb-content">
+            <section id="intro">
         <h2>지역 소개</h2>
         <p>성북구는 한양도성 성곽의 북쪽 자락에 기대어 형성된 유서 깊은 문화·학문의 고장입니다. 구의 이름은 조선 영조 때 어영청 소속 북둔(北屯)이 도성 북쪽에 자리했던 데서 비롯되었으며, 성북동이라는 지명은 1894년 갑오개혁 무렵 문헌에 처음 등장합니다. 간송미술관과 심우장, 길상사, 최순우 옛집이 한옥 골목 사이에 이웃해 있어 서울에서 손꼽히는 근대문화 예술 밀집지로 통합니다. 고려대·국민대·성신여대·한성대를 비롯한 여러 대학이 밀집해 젊은 학구적 분위기가 도시 전역에 스며 있습니다. 북한산 자락의 정릉계곡과 개운산·오패산의 녹지가 도심 주거지와 맞닿아 자연과 생활이 가까운 곳입니다.</p>
       </section>
@@ -257,9 +618,60 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
         </ul>
       </section>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 성북구 지역 정보 페이지입니다.</p>
-    </footer>
   </main>
+
+  <footer class="sb-foot">
+    서울특별시 성북구 · 한지에 먹으로 새기듯 기록한 지역 안내
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('sb-root');
+  if(!root)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* 1) unfold the scroll on entry */
+  var hero=document.getElementById('sb-hero');
+  if(hero){
+    if(reduce){hero.classList.add('is-open');}
+    else{
+      // let paint settle, then trigger unfold animation
+      requestAnimationFrame(function(){
+        setTimeout(function(){hero.classList.add('is-open');},180);
+      });
+    }
+  }
+
+  /* 2) scroll-reveal each content section (enhancement only) */
+  var sections=document.querySelectorAll('#sb-content section');
+  if(sections.length){
+    if(reduce || !('IntersectionObserver' in window)){
+      // no-op: sections stay fully visible by default
+    }else{
+      sections.forEach(function(s){s.classList.add('sb-anim');});
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){e.target.classList.add('sb-in');io.unobserve(e.target);}
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      sections.forEach(function(s){io.observe(s);});
+      // safety: if observer never fires, reveal after 2.5s
+      setTimeout(function(){sections.forEach(function(s){s.classList.add('sb-in');});},2500);
+    }
+  }
+
+  /* 3) optional: enrich hero lead from region-data JSON if the token wasn't filled */
+  try{
+    var dataEl=document.getElementById('region-data');
+    var lead=document.querySelector('.sb-vert__lead');
+    if(dataEl&&lead&&(!lead.textContent||/\{\{/.test(lead.textContent))){
+      var d=JSON.parse(dataEl.textContent||'{}');
+      if(d&&d.intro){lead.textContent=d.intro;}
+    }
+  }catch(e){/* silent: content remains readable */}
+})();
+</script>
 </body>
 </html>
